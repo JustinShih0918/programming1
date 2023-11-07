@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/justinshih/大學/程設一/output/week4/Yang_mid_practice1/output/Easy_Gomoku_validator"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003528, symSize: 0x3AC }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003528, symSize: 0x3AC }
+  - { offsetInCU: 0xED, offset: 0xED, size: 0x8, addend: 0x0, symName: _printAll, symObjAddr: 0x3AC, symBinAddr: 0x1000038D4, symSize: 0xC8 }
+  - { offsetInCU: 0x149, offset: 0x149, size: 0x8, addend: 0x0, symName: _inspect, symObjAddr: 0x474, symBinAddr: 0x10000399C, symSize: 0x4D8 }
+  - { offsetInCU: 0x2F0, offset: 0x2F0, size: 0x8, addend: 0x0, symName: _judge, symObjAddr: 0x94C, symBinAddr: 0x100003E74, symSize: 0x8C }
+...

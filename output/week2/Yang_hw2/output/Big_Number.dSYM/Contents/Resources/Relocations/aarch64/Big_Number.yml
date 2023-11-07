@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/justinshih/大學/程設一/output/week2/Yang_hw2/output/Big_Number"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _first4, symObjAddr: 0x0, symBinAddr: 0x100003D70, symSize: 0x1C }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _first4, symObjAddr: 0x0, symBinAddr: 0x100003D70, symSize: 0x1C }
+  - { offsetInCU: 0x69, offset: 0x69, size: 0x8, addend: 0x0, symName: _last4, symObjAddr: 0x1C, symBinAddr: 0x100003D8C, symSize: 0x24 }
+  - { offsetInCU: 0x91, offset: 0x91, size: 0x8, addend: 0x0, symName: _first8, symObjAddr: 0x40, symBinAddr: 0x100003DB0, symSize: 0x20 }
+  - { offsetInCU: 0xB9, offset: 0xB9, size: 0x8, addend: 0x0, symName: _last8, symObjAddr: 0x60, symBinAddr: 0x100003DD0, symSize: 0x28 }
+  - { offsetInCU: 0xE1, offset: 0xE1, size: 0x8, addend: 0x0, symName: _shift4, symObjAddr: 0x88, symBinAddr: 0x100003DF8, symSize: 0x1C }
+  - { offsetInCU: 0x109, offset: 0x109, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xA4, symBinAddr: 0x100003E14, symSize: 0x164 }
+...

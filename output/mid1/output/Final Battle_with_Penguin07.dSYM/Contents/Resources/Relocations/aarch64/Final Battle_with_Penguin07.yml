@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/justinshih/大學/程設一/output/mid1/output/Final Battle_with_Penguin07"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x10000352C, symSize: 0x864 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _N, symBinAddr: 0x100008010, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x69, size: 0x8, addend: 0x0, symName: _M, symBinAddr: 0x100008008, symSize: 0x0 }
+  - { offsetInCU: 0x7E, offset: 0x7E, size: 0x8, addend: 0x0, symName: _K, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x93, offset: 0x93, size: 0x8, addend: 0x0, symName: _Q, symBinAddr: 0x100008018, symSize: 0x0 }
+  - { offsetInCU: 0x9C, offset: 0x9C, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x10000352C, symSize: 0x864 }
+  - { offsetInCU: 0x34C, offset: 0x34C, size: 0x8, addend: 0x0, symName: _insert, symObjAddr: 0x864, symBinAddr: 0x100003D90, symSize: 0x18C }
+...

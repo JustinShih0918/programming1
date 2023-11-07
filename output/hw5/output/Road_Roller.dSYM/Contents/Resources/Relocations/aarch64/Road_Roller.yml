@@ -1,0 +1,12 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/justinshih/大學/程設一/output/hw5/output/Road_Roller"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000031E0, symSize: 0x9A8 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _N, symBinAddr: 0x100008004, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x69, size: 0x8, addend: 0x0, symName: _M, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x72, offset: 0x72, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000031E0, symSize: 0x9A8 }
+  - { offsetInCU: 0x17C, offset: 0x17C, size: 0x8, addend: 0x0, symName: _findDirection, symObjAddr: 0x9B8, symBinAddr: 0x100003B98, symSize: 0x1E8 }
+  - { offsetInCU: 0x206, offset: 0x206, size: 0x8, addend: 0x0, symName: _comparator, symObjAddr: 0xBA0, symBinAddr: 0x100003D80, symSize: 0xBC }
+  - { offsetInCU: 0x266, offset: 0x266, size: 0x8, addend: 0x0, symName: _showArray, symObjAddr: 0xC5C, symBinAddr: 0x100003E3C, symSize: 0xFC }
+...

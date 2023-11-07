@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/justinshih/大學/程設一/output/week4/Yang_mid_practice1/output/Longest_Palindrome_Substring"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003830, symSize: 0x200 }
+  - { offsetInCU: 0x48, offset: 0x48, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003830, symSize: 0x200 }
+  - { offsetInCU: 0xFD, offset: 0xFD, size: 0x8, addend: 0x0, symName: _Expand, symObjAddr: 0x200, symBinAddr: 0x100003A30, symSize: 0x138 }
+  - { offsetInCU: 0x15D, offset: 0x15D, size: 0x8, addend: 0x0, symName: _manacher, symObjAddr: 0x338, symBinAddr: 0x100003B68, symSize: 0x2FC }
+  - { offsetInCU: 0x23B, offset: 0x23B, size: 0x8, addend: 0x0, symName: _preprocess, symObjAddr: 0x634, symBinAddr: 0x100003E64, symSize: 0xBC }
+...

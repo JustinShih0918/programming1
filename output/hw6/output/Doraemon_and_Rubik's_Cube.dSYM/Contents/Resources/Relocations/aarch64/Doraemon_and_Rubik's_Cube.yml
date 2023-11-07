@@ -1,0 +1,16 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/justinshih/大學/程設一/output/hw6/output/Doraemon_and_Rubik's_Cube"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _readRubiksState, symObjAddr: 0x0, symBinAddr: 0x10000359C, symSize: 0x104 }
+  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _rotateIndex, symObjAddr: 0x98C, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x80, offset: 0x80, size: 0x8, addend: 0x0, symName: _colors, symObjAddr: 0xA1C, symBinAddr: 0x100008090, symSize: 0x0 }
+  - { offsetInCU: 0xA1, offset: 0xA1, size: 0x8, addend: 0x0, symName: _rubiks, symBinAddr: 0x10000809C, symSize: 0x0 }
+  - { offsetInCU: 0xC8, offset: 0xC8, size: 0x8, addend: 0x0, symName: _n, symBinAddr: 0x100008098, symSize: 0x0 }
+  - { offsetInCU: 0xD8, offset: 0xD8, size: 0x8, addend: 0x0, symName: _readRubiksState, symObjAddr: 0x0, symBinAddr: 0x10000359C, symSize: 0x104 }
+  - { offsetInCU: 0x134, offset: 0x134, size: 0x8, addend: 0x0, symName: _move, symObjAddr: 0x104, symBinAddr: 0x1000036A0, symSize: 0x19C }
+  - { offsetInCU: 0x1E4, offset: 0x1E4, size: 0x8, addend: 0x0, symName: _printRubiks, symObjAddr: 0x2A0, symBinAddr: 0x10000383C, symSize: 0x1A4 }
+  - { offsetInCU: 0x232, offset: 0x232, size: 0x8, addend: 0x0, symName: _isSolved, symObjAddr: 0x444, symBinAddr: 0x1000039E0, symSize: 0x154 }
+  - { offsetInCU: 0x2AE, offset: 0x2AE, size: 0x8, addend: 0x0, symName: _solve, symObjAddr: 0x598, symBinAddr: 0x100003B34, symSize: 0x31C }
+  - { offsetInCU: 0x2F2, offset: 0x2F2, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x8E4, symBinAddr: 0x100003E80, symSize: 0xA8 }
+...
