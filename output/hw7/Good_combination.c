@@ -38,7 +38,6 @@ void comb(int p, int LB, int RB,int times) {
     }
 
     //recursive step
-    //do the first one
     int temp = -1;
     for(int i = p;i<=RB;i++){
         if(Num[i]!=temp){

@@ -24,9 +24,6 @@ int main () {
     int T;
     scanf("%d", &T);
     while (T--) {
-        for (int i = 0;i < MAXN; ++i)
-            for (int j = 0;j < MAXN; ++j)
-                record[i][j] = -1;
         scanf("%s", s);
         int length = strlen(s);
         int count = 0;
