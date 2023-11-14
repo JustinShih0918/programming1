@@ -1,0 +1,14 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/justinshih/大學/程設一/output/hw7/output/Good_combination"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _bubble_sort, symObjAddr: 0x0, symBinAddr: 0x100003B50, symSize: 0xFC }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _Num, symBinAddr: 0x10000800C, symSize: 0x0 }
+  - { offsetInCU: 0x75, offset: 0x75, size: 0x8, addend: 0x0, symName: _solution, symBinAddr: 0x100008034, symSize: 0x0 }
+  - { offsetInCU: 0x8A, offset: 0x8A, size: 0x8, addend: 0x0, symName: _N, symBinAddr: 0x100008008, symSize: 0x0 }
+  - { offsetInCU: 0x9F, offset: 0x9F, size: 0x8, addend: 0x0, symName: _M, symBinAddr: 0x100008004, symSize: 0x0 }
+  - { offsetInCU: 0xB4, offset: 0xB4, size: 0x8, addend: 0x0, symName: _K, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0xBD, offset: 0xBD, size: 0x8, addend: 0x0, symName: _bubble_sort, symObjAddr: 0x0, symBinAddr: 0x100003B50, symSize: 0xFC }
+  - { offsetInCU: 0x119, offset: 0x119, size: 0x8, addend: 0x0, symName: _comb, symObjAddr: 0xFC, symBinAddr: 0x100003C4C, symSize: 0x1E0 }
+  - { offsetInCU: 0x1AD, offset: 0x1AD, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x2DC, symBinAddr: 0x100003E2C, symSize: 0x140 }
+...

@@ -3,7 +3,9 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__functional",
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1"
             ],
             "defines": [],
             "macFrameworkPath": [
