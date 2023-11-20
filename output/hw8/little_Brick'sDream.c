@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void func(int x);
+void func(int index,int a[],int b[]);
 void pA(int a[],int length);
 
 int main(void){
@@ -9,34 +9,47 @@ int main(void){
     scanf("%d %d",&N,&X);
     int a[N];
     int b[N];
-    int c[N];
+
+    memset(a,0,sizeof(a));
     memset(b,0,sizeof(b));
-    memset(c,0,sizeof(b));
 
     for(int i = 0;i<N;i++){
         scanf("%d",&a[i]);
     }
 
-    int n = 0;
-    for(int i = N-1;i>=0;i--){
-        for(int j = i-1;j>=0;j--){
-            if(a[i]>a[j]) b[i]++;
-            else break;
-        }
-        if(b[i]==X){
-            c[n] = i+1;
-            n++;
-        }
+    int isF = 0;
+    for(int i = 0;i<N;i++){
+       func(i,a,b);
+       if(b[i]==X&&!isF){
+            printf("%d",i+1);
+            isF = 1;
+       }
+       else if(b[i]==X&&isF){
+            printf(" %d",i+1);
+       }
     }
+    if(isF) printf("\n");
+    else printf("ouo\n");
 
-    if(c[0]==0) printf("ouo\n");
-    else{
-        for(int i = n-1;i>=1;i--){
-            printf("%d ",c[i]);
-        }
-        printf("%d\n",c[0]);
-    }
+    //pA(b,N);
 }
+
+void func(int index,int a[],int b[]){
+
+    for(int i = index-1;i>=0;i--){
+        //printf("index:%d,Val:%d\n",index,a[index]);
+        if(b[i]!=0&&a[index]>a[i]){
+            //printf("b:%d,a:%d\n",b[i],a[i]);
+            b[index]+=(b[i]+1);
+            i-=b[i];
+        }else if(a[index]>a[i]){
+            //printf("a:%d\n",a[i]);
+            b[index]+=1;
+        }else break;
+    }
+    //printf("final value:%d\n",b[index]);
+}
+
 
 void pA(int a[],int length){
     printf("%d",a[0]);
