@@ -2,10 +2,9 @@
 triple:          'arm64-apple-darwin'
 binary-path:     "/Users/justinshih/college/程設一/output/hw8/output/writingAPP"
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003A78, symSize: 0x124 }
-  - { offsetInCU: 0x48, offset: 0x48, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003A78, symSize: 0x124 }
-  - { offsetInCU: 0x99, offset: 0x99, size: 0x8, addend: 0x0, symName: _dfs, symObjAddr: 0x124, symBinAddr: 0x100003B9C, symSize: 0x19C }
-  - { offsetInCU: 0x11A, offset: 0x11A, size: 0x8, addend: 0x0, symName: _isP, symObjAddr: 0x2C0, symBinAddr: 0x100003D38, symSize: 0xDC }
-  - { offsetInCU: 0x17A, offset: 0x17A, size: 0x8, addend: 0x0, symName: _removeA, symObjAddr: 0x39C, symBinAddr: 0x100003E14, symSize: 0x7C }
-  - { offsetInCU: 0x1B0, offset: 0x1B0, size: 0x8, addend: 0x0, symName: _pArr, symObjAddr: 0x418, symBinAddr: 0x100003E90, symSize: 0xB4 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003B48, symSize: 0x160 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _dm, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x71, offset: 0x71, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003B48, symSize: 0x160 }
+  - { offsetInCU: 0xD0, offset: 0xD0, size: 0x8, addend: 0x0, symName: _isP, symObjAddr: 0x160, symBinAddr: 0x100003CA8, symSize: 0x200 }
+  - { offsetInCU: 0x13E, offset: 0x13E, size: 0x8, addend: 0x0, symName: _pArr, symObjAddr: 0x360, symBinAddr: 0x100003EA8, symSize: 0xB4 }
 ...

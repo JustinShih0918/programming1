@@ -1,62 +1,46 @@
 #include <stdio.h>
 #include <string.h>
-
-int dfs(char a[],int n,int k);
-int isP(char a[]);
-int removeA(char a[],int idxToDel);
-void pArr(char a[]);
-
+int dm[1001][1001];
+void pArr(char a[],int left,int right);
+int isP(char a[],int left,int right);
 
 int main(void){
+    memset(dm,-1,sizeof(dm));
     int n,k;
     scanf("%d %d",&n,&k);
     char word[n];  
     scanf("%s",word);
-    printf(dfs(word,n,k)? "Yes\n":"No\n");
+    int ans = isP(word,0,n-1);
+    if(ans<=k) printf("Yes\n");
+    else printf("No\n");
 }
 
-int dfs(char a[],int n,int k){
-    if(k==0){
-        //pArr(a);
-        return isP(a);
-    }
 
-    for(int i = 0;i<n;i++){
-        char b[n];
-        strcpy(b,a);
-        if(removeA(b,i)) return 1;
-        if(dfs(b,n-1,k-1)) return 1;
+int isP(char a[],int left,int right){
+    if(left>=right){
+        dm[left][right] = 0;
+        return dm[left][right];
     }
-    return 0;
-}
-
-int isP(char a[]){
-    int length = (int)strlen(a);
-    int r = 0;
-    int l = length-1;
-    int answer = 1;
-    while(r<length&&l>=0){
-        if(a[r]==a[l]){
-            r++;
-            l--;
-        }else{
-            answer = 0;
-            break;
+    //recursion
+    if(a[left]==a[right]) {
+        dm[left][right] = isP(a,left+1,right-1);
+        return dm[left][right];
+    }
+    else{
+        if(dm[left][right]==-1){
+            int dL = isP(a,left+1,right);
+            int dR = isP(a,left,right-1);
+            dm[left][right] = (dL>dR)?dR+1:dL+1;
+            return dm[left][right];
         }
+        else return dm[left][right];
+        
     }
-    return answer;
 }
 
-int removeA(char a[],int idxToDel){
-    memmove(&a[idxToDel], &a[idxToDel + 1], strlen(a) - idxToDel);
-    return isP(a);
-}
-
-
-void pArr(char a[]){
-    int length = (int)strlen(a);
-    printf("%c",a[0]);
-    for(int i = 1;i<length;i++){
+void pArr(char a[],int left,int right){
+    printf("%c",a[left]);
+    for(int i = left+1;i<=right;i++){
         printf(" %c",a[i]);
     }
     printf("\n");
