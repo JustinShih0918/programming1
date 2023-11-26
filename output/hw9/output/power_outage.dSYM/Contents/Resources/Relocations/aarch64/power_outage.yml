@@ -1,0 +1,15 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/justinshih/college/程設一/output/hw9/output/power_outage"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _readGraph, symObjAddr: 0x0, symBinAddr: 0x100003ADC, symSize: 0x290 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _ansArea, symObjAddr: 0x488, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x69, size: 0x8, addend: 0x0, symName: _ansLocation, symObjAddr: 0x48C, symBinAddr: 0x100008004, symSize: 0x0 }
+  - { offsetInCU: 0x7E, offset: 0x7E, size: 0x8, addend: 0x0, symName: _cable, symBinAddr: 0x100008008, symSize: 0x0 }
+  - { offsetInCU: 0xA8, offset: 0xA8, size: 0x8, addend: 0x0, symName: _neighborCount, symBinAddr: 0x10018EA20, symSize: 0x0 }
+  - { offsetInCU: 0xCC, offset: 0xCC, size: 0x8, addend: 0x0, symName: _neighbor, symBinAddr: 0x1000CB518, symSize: 0x0 }
+  - { offsetInCU: 0xF5, offset: 0xF5, size: 0x8, addend: 0x0, symName: _n, symBinAddr: 0x1000CB510, symSize: 0x0 }
+  - { offsetInCU: 0xFE, offset: 0xFE, size: 0x8, addend: 0x0, symName: _readGraph, symObjAddr: 0x0, symBinAddr: 0x100003ADC, symSize: 0x290 }
+  - { offsetInCU: 0x192, offset: 0x192, size: 0x8, addend: 0x0, symName: _dfs, symObjAddr: 0x290, symBinAddr: 0x100003D6C, symSize: 0x190 }
+  - { offsetInCU: 0x22A, offset: 0x22A, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x420, symBinAddr: 0x100003EFC, symSize: 0x58 }
+...
