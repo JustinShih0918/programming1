@@ -44,6 +44,7 @@ void hex_to_dex(char* input,int n){
         sscanf(str_hex,"%x",&num);
         sprintf(str_dec, "%d", num);
         strcat(d[n],str_dec);
+        printf("%s\n",d[n]);
     }
     len[n] = strlen(d[n]);
     for(int pos = 0;pos<len[n];pos++){
@@ -103,5 +104,4 @@ void find_ans(){
 
     bubble_sort_1();
     bubble_sort_2();
-
 }

@@ -7,6 +7,8 @@
         "vector": "c",
         "__locale": "c",
         "ios": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "algorithm": "c",
+        "functional": "c"
     }
 }
