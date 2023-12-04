@@ -1,101 +1,67 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-int n,k;
-#define MAXN 1005
-#define MAXLEN 305
-char d[MAXN][MAXN] = {'\0'};
-int cnt[MAXN] = {0};
-int len[MAXN] = {0};
-int ans[MAXN];
+#include <limits.h>
+#define N 100001
 
+int cable[N][2], neighborCount[N], *neighbor[N];
+int n;
 
-
-int cmp_1(int a,int b){
-    if(cnt[a]<cnt[b]) return 1;
-    else if(cnt[a]>cnt[b]) return -1;
-    else{
-        if(len[a]<len[b]) return 1;
-        else if(len[a]>len[b]) return -1;
-        else {
-            int res = strcmp(d[a],d[b]);
-            if(res>0) return -1;
-            else if(res<0) return 1;
-            else return 0;
-        }
+void readGraph() {
+    scanf("%d", &n);
+    for (int i=0; i<n-1; i++) {
+        scanf("%d %d", &cable[i][0], &cable[i][1]);
+        neighborCount[cable[i][0]]++;
+        neighborCount[cable[i][1]]++;
     }
-}
-void bubble_sort_1(){
-    for(int i = 0;i<n-1;i++){
-        for(int j = 0;j<n-1-i;j++){
-            if(cmp_1(ans[j],ans[j+1])>0){
-                int temp = ans[j];
-                ans[j] = ans[j+1];
-                ans[j+1] = temp;
-            }
-        }
+    for (int i=1; i<=n; i++) {
+        neighbor[i] = (int*)malloc(neighborCount[i] * sizeof(int));
+    }
+    int neighborIndex[N] = {};
+    for (int i=0; i<n-1; i++) {
+        int u = cable[i][0], v = cable[i][1];
+        neighbor[u][neighborIndex[u]++] = v;
+        neighbor[v][neighborIndex[v]++] = u;
     }
 }
 
-int cmp_2(int a,int b){
-    if(len[a]>len[b]) return 1;
-    else if(len[a]<len[b]) return -1;
-    else return strcmp(d[a],d[b]);
-}
-
-void bubble_sort_2(){
-    for(int i = 0;i<k-1;i++){
-        for(int j = 0;j<k-1-i;j++){
-            if(cmp_2(ans[j],ans[j+1])>0){
-                int temp = ans[j];
-                ans[j] = ans[j+1];
-                ans[j+1] = temp;
-            }
-        }
-    }
-}
-
-void find_ans(){
-    for(int i = 0;i<n;i++){
-        ans[i] = i;
-    }
-    bubble_sort_1();
-    bubble_sort_2();
-}
 
 
-void hex_to_dec(char* input,int n){
 
-    for(int i = 0,j=0;input[j]!='\0';i = j+1){
-        char hex[MAXLEN] = {'\0'};
-        char dec[MAXLEN] = {'\0'};
-        int  num = 0;
-        j = i;
-        while(input[j]!='|'&&input[j]!='\0') j++;
-        strncpy(hex,input+i,j-i);
-        sscanf(hex,"%x",&num);
-        sprintf(dec,"%d",num);
-        strcat(d[n],dec);
-        //printf("%s\n",d[n]);
-    }
-    len[n] = strlen(d[n]);
-    for(int i = 0;i<len[n];i++){
-        if(d[n][i]=='7') cnt[n]++;
-    }
-}
-
+int anslocation=-1, ansdistance=INT_MAX;
 int main() {
-    scanf("%d %d",&n,&k);
-    char input[255];
-    for(int i = 0;i<n;i++){
-        scanf("%s",input);
-        hex_to_dec(input,i);
+    readGraph();
+    for (int i=1;i<=n;i++)
+    {
+        int maxdistance=dfs(i,0);
+        if (maxdistance<ansdistance)
+        {
+            ansdistance=maxdistance;
+            anslocation=i;
+        }
     }
-    find_ans();
-    for(int i = 0;i<k;i++){
-        printf("%s\n",d[ans[i]]);
-    }
-
-    
+    printf("%d\n", anslocation);
     return 0;
+}
+
+
+
+int  dfs(int location, int from)
+{
+    if (neighborCount[location]==1&&neighbor[location][0]==from)
+    {
+        return 0;
+    }
+    int distance=0;
+    int maxdistance=-1;
+    for (int i=0;i<neighborCount[location];i++)
+    {
+        int x=neighbor[location][i];
+        if (x==from) continue;
+        distance=dfs(x, location)+1;
+        if (distance>maxdistance)
+        {
+            maxdistance=distance;
+        }
+    }
+    return maxdistance;
 }
