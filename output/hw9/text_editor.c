@@ -42,7 +42,7 @@ int main()
                 i = i+4;
                 break;
             case 'r':
-                j++;
+                if(content[j]!='\0') j++;
                 i = i+5;
                 break;   
             default:
@@ -50,7 +50,7 @@ int main()
                 content[j] = input[i];
                 strcpy(&content[j+1],temp);
                 j++;
-                break;
+                
             }
         }else if(input[i]!='\n'&&input[i]!='/'){
             strcpy(temp,content+j);

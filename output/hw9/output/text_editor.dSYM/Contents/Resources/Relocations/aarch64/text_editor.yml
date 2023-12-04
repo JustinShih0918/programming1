@@ -2,9 +2,9 @@
 triple:          'arm64-apple-darwin'
 binary-path:     "/Users/justinshih/college/程設一/output/hw9/output/text_editor"
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003BD8, symSize: 0x350 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003BB8, symSize: 0x370 }
   - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _content, symBinAddr: 0x100008000, symSize: 0x0 }
   - { offsetInCU: 0x6F, offset: 0x6F, size: 0x8, addend: 0x0, symName: _input, symBinAddr: 0x1000081F4, symSize: 0x0 }
   - { offsetInCU: 0x84, offset: 0x84, size: 0x8, addend: 0x0, symName: _temp, symBinAddr: 0x1000083E8, symSize: 0x0 }
-  - { offsetInCU: 0x94, offset: 0x94, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003BD8, symSize: 0x350 }
+  - { offsetInCU: 0x94, offset: 0x94, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003BB8, symSize: 0x370 }
 ...
