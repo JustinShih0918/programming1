@@ -1,67 +1,68 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
-#define N 100001
+#include <string.h>
+#include <ctype.h>
 
-int cable[N][2], neighborCount[N], *neighbor[N];
+#define MAXL 100005
+#define MAXN 1005
+
 int n;
+char key[MAXN];
+int cnt[MAXN];
+char person[MAXL];
+char tempName[MAXL];
+char tempSen[MAXL];
+char temp[MAXL];
+char *token;
+char s[6] = " ,!?.";
+char ansPerson[MAXL];
+char ansSen[MAXL];
+int max = 0;
 
-void readGraph() {
-    scanf("%d", &n);
-    for (int i=0; i<n-1; i++) {
-        scanf("%d %d", &cable[i][0], &cable[i][1]);
-        neighborCount[cable[i][0]]++;
-        neighborCount[cable[i][1]]++;
-    }
-    for (int i=1; i<=n; i++) {
-        neighbor[i] = (int*)malloc(neighborCount[i] * sizeof(int));
-    }
-    int neighborIndex[N] = {};
-    for (int i=0; i<n-1; i++) {
-        int u = cable[i][0], v = cable[i][1];
-        neighbor[u][neighborIndex[u]++] = v;
-        neighbor[v][neighborIndex[v]++] = u;
-    }
-}
-
-
-
-
-int anslocation=-1, ansdistance=INT_MAX;
-int main() {
-    readGraph();
-    for (int i=1;i<=n;i++)
-    {
-        int maxdistance=dfs(i,0);
-        if (maxdistance<ansdistance)
-        {
-            ansdistance=maxdistance;
-            anslocation=i;
+int main(){
+    scanf("%d %s\n",&n,key);
+    int klen = strlen(key);
+    for(int i = 0;i<n;i++){
+        if(fgets(person,MAXL,stdin)!=NULL){
+            memset(tempName,'\0',sizeof(tempName));
+            memset(tempSen,'\0',sizeof(tempSen));
+            memset(temp,'\0',sizeof(temp));
+            int len = strlen(person);
+            int pos = 0;
+            for(int j = 0;j<len;j++){
+                if(person[j]==':'){
+                    pos = j;
+                    break;
+                }
+            }
+            strncpy(tempName,person,pos);
+            strcpy(tempSen,&person[pos+1]);
+            strcpy(temp,tempSen);
+            //printf("%s\n%s\n%s\n",tempName,tempSen,temp);
+            
+            token = strtok(temp,s);
+            while(token!=NULL){
+                int tlen = strlen(token);
+                int isS = 0;
+                if(tlen==klen){
+                    for(int k = 0;k<tlen;k++){
+                        if((token[k]==key[k])||(toupper(token[k])==key[k])||(tolower(token[k])==key[k])){
+                            isS = 1;
+                        }else{
+                            isS = 0;
+                            break;
+                        }
+                    }
+        
+                }
+                if(isS) cnt[i]++;
+                token = strtok(NULL,s);
+            }
+        }
+        if(cnt[i]>max){
+            strcpy(ansPerson,tempName);
+            strcpy(ansSen,tempSen);
+            max = cnt[i];
         }
     }
-    printf("%d\n", anslocation);
-    return 0;
-}
-
-
-
-int  dfs(int location, int from)
-{
-    if (neighborCount[location]==1&&neighbor[location][0]==from)
-    {
-        return 0;
-    }
-    int distance=0;
-    int maxdistance=-1;
-    for (int i=0;i<neighborCount[location];i++)
-    {
-        int x=neighbor[location][i];
-        if (x==from) continue;
-        distance=dfs(x, location)+1;
-        if (distance>maxdistance)
-        {
-            maxdistance=distance;
-        }
-    }
-    return maxdistance;
+    printf("%s: %s",ansPerson,ansSen);
 }

@@ -13,7 +13,7 @@ int main()
     fgets(input, MAX_SIZE, stdin);
 
     int len = (int)strlen(input);
-
+    
     
     for(int i = 0,j = 0;i<len;i++){
         if(input[i]=='/'){
@@ -50,7 +50,6 @@ int main()
                 content[j] = input[i];
                 strcpy(&content[j+1],temp);
                 j++;
-                
             }
         }else if(input[i]!='\n'&&input[i]!='/'){
             strcpy(temp,content+j);
