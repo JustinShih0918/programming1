@@ -2,9 +2,9 @@
 triple:          'arm64-apple-darwin'
 binary-path:     "/Users/justinshih/college/程設一/output/week1/Yang_hw1/output/practice"
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003ADC, symSize: 0x43C }
-  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _s, symObjAddr: 0x43C, symBinAddr: 0x100008000, symSize: 0x0 }
-  - { offsetInCU: 0x6E, offset: 0x6E, size: 0x8, addend: 0x0, symName: _max, symObjAddr: 0xDE0, symBinAddr: 0x100008008, symSize: 0x0 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003B1C, symSize: 0x404 }
+  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _s, symObjAddr: 0x404, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x6E, offset: 0x6E, size: 0x8, addend: 0x0, symName: _max, symObjAddr: 0xD80, symBinAddr: 0x100008008, symSize: 0x0 }
   - { offsetInCU: 0x8A, offset: 0x8A, size: 0x8, addend: 0x0, symName: _n, symBinAddr: 0x10003A0FC, symSize: 0x0 }
   - { offsetInCU: 0x9F, offset: 0x9F, size: 0x8, addend: 0x0, symName: _key, symBinAddr: 0x100039D0C, symSize: 0x0 }
   - { offsetInCU: 0xC1, offset: 0xC1, size: 0x8, addend: 0x0, symName: _cnt, symBinAddr: 0x100038D58, symSize: 0x0 }
@@ -15,5 +15,5 @@ relocations:
   - { offsetInCU: 0x146, offset: 0x146, size: 0x8, addend: 0x0, symName: _token, symBinAddr: 0x10009BB98, symSize: 0x0 }
   - { offsetInCU: 0x160, offset: 0x160, size: 0x8, addend: 0x0, symName: _ansPerson, symBinAddr: 0x10000800C, symSize: 0x0 }
   - { offsetInCU: 0x175, offset: 0x175, size: 0x8, addend: 0x0, symName: _ansSen, symBinAddr: 0x1000206B1, symSize: 0x0 }
-  - { offsetInCU: 0x17E, offset: 0x17E, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003ADC, symSize: 0x43C }
+  - { offsetInCU: 0x17E, offset: 0x17E, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003B1C, symSize: 0x404 }
 ...
