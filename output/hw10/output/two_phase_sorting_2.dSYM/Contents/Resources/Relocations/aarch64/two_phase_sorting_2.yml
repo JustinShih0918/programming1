@@ -1,0 +1,19 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/justinshih/college/程設一/output/hw10/output/two_phase_sorting_2"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _find_order, symObjAddr: 0x0, symBinAddr: 0x1000038C4, symSize: 0xF0 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _n, symBinAddr: 0x10000819C, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x69, size: 0x8, addend: 0x0, symName: _v, symBinAddr: 0x100008F6F, symSize: 0x0 }
+  - { offsetInCU: 0x8A, offset: 0x8A, size: 0x8, addend: 0x0, symName: _input, symBinAddr: 0x100008194, symSize: 0x0 }
+  - { offsetInCU: 0xAB, offset: 0xAB, size: 0x8, addend: 0x0, symName: _store, symBinAddr: 0x100008CAC, symSize: 0x0 }
+  - { offsetInCU: 0xD2, offset: 0xD2, size: 0x8, addend: 0x0, symName: _order, symBinAddr: 0x1000081A0, symSize: 0x0 }
+  - { offsetInCU: 0xF9, offset: 0xF9, size: 0x8, addend: 0x0, symName: _ans, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x10E, offset: 0x10E, size: 0x8, addend: 0x0, symName: _find_order, symObjAddr: 0x0, symBinAddr: 0x1000038C4, symSize: 0xF0 }
+  - { offsetInCU: 0x178, offset: 0x178, size: 0x8, addend: 0x0, symName: _cmp_1, symObjAddr: 0xF0, symBinAddr: 0x1000039B4, symSize: 0x68 }
+  - { offsetInCU: 0x1AE, offset: 0x1AE, size: 0x8, addend: 0x0, symName: _sort_1, symObjAddr: 0x158, symBinAddr: 0x100003A1C, symSize: 0x1B0 }
+  - { offsetInCU: 0x226, offset: 0x226, size: 0x8, addend: 0x0, symName: _save, symObjAddr: 0x308, symBinAddr: 0x100003BCC, symSize: 0x44 }
+  - { offsetInCU: 0x24A, offset: 0x24A, size: 0x8, addend: 0x0, symName: _cmp_2, symObjAddr: 0x34C, symBinAddr: 0x100003C10, symSize: 0x70 }
+  - { offsetInCU: 0x28E, offset: 0x28E, size: 0x8, addend: 0x0, symName: _sort_2, symObjAddr: 0x3BC, symBinAddr: 0x100003C80, symSize: 0x15C }
+  - { offsetInCU: 0x314, offset: 0x314, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x518, symBinAddr: 0x100003DDC, symSize: 0x180 }
+...
