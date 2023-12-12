@@ -4,41 +4,39 @@
 
 
 Table* createTable(){
-    Table *table = malloc(sizeof(Table));
-    int size;
-    scanf("%d",&size);
-    table->tableSize = size;
-    table->leaveTime = 0;
+    Table *table  = malloc(sizeof(Table));
+    scanf("%d",&table->tableSize);
     table->guest = NULL;
+    table->leaveTime = 0;
     return table;
 }
 Guest* createGuest(){
-    Guest *guest = malloc(sizeof(Guest));
-    char *name = (char *)malloc(sizeof(char)*15);
+    Guest *guest = malloc(sizeof(guest));
+    char *name = (char *)malloc(sizeof(char));
     scanf("%s",name);
     guest->guestName = name;
     scanf("%d",&guest->groupSize);
     scanf("%d",&guest->arriveTime);
     scanf("%d",&guest->diningTime);
-    
+
     return guest;
 }
 Guest* checkLeave(Table **table, int tableCount, int currentTime){
     for(int i = 0;i<tableCount;i++){
         if(table[i]->leaveTime==currentTime){
-            Guest *guest = table[i]->guest;
+            Guest *temp = table[i]->guest;
             table[i]->guest = NULL;
-            table[i]->leaveTime =0;
-            return guest;
+            table[i]->leaveTime = 0;
+            return temp;
         }
     }
     return NULL;
 }
 int assignTable(Table **table, int tableCount, int currentTime, Guest *guest){
-    for(int i = 0;i<tableCount;i++){
-        if((table[i]->guest==NULL)&&((table[i]->tableSize)>=(guest->groupSize))){
+    for(int i =0;i<tableCount;i++){
+        if(table[i]->guest==NULL&&table[i]->tableSize>=guest->groupSize){
             table[i]->guest = guest;
-            table[i]->leaveTime = (guest->diningTime)+currentTime;
+            table[i]->leaveTime = guest->diningTime+currentTime;
             return 1;
         }
     }

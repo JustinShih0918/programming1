@@ -23,7 +23,6 @@ int main() {
     scanf("%d", &tableCount);
     for (int i=0; i<tableCount; i++){
         table[i] = createTable();
-        
     }
     scanf("%d", &guestCount);
     for (int i=0; i<guestCount; i++) {

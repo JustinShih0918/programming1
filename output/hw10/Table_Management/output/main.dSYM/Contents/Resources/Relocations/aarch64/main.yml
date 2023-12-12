@@ -2,16 +2,16 @@
 triple:          'arm64-apple-darwin'
 binary-path:     "/Users/justinshih/college/程設一/output/hw10/Table_Management/output/main"
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _createTable, symObjAddr: 0x0, symBinAddr: 0x10000382C, symSize: 0x5C }
-  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _currentGuest, symObjAddr: 0x15DC, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _createTable, symObjAddr: 0x0, symBinAddr: 0x10000380C, symSize: 0x58 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _currentGuest, symObjAddr: 0x1610, symBinAddr: 0x100008000, symSize: 0x0 }
   - { offsetInCU: 0x69, offset: 0x69, size: 0x8, addend: 0x0, symName: _table, symBinAddr: 0x1000081A0, symSize: 0x0 }
   - { offsetInCU: 0x10D, offset: 0x10D, size: 0x8, addend: 0x0, symName: _guest, symBinAddr: 0x100008008, symSize: 0x0 }
   - { offsetInCU: 0x12E, offset: 0x12E, size: 0x8, addend: 0x0, symName: _tableCount, symBinAddr: 0x100008330, symSize: 0x0 }
   - { offsetInCU: 0x143, offset: 0x143, size: 0x8, addend: 0x0, symName: _guestCount, symBinAddr: 0x100008198, symSize: 0x0 }
-  - { offsetInCU: 0x14C, offset: 0x14C, size: 0x8, addend: 0x0, symName: _createTable, symObjAddr: 0x0, symBinAddr: 0x10000382C, symSize: 0x5C }
-  - { offsetInCU: 0x182, offset: 0x182, size: 0x8, addend: 0x0, symName: _createGuest, symObjAddr: 0x5C, symBinAddr: 0x100003888, symSize: 0xA8 }
-  - { offsetInCU: 0x1B8, offset: 0x1B8, size: 0x8, addend: 0x0, symName: _checkLeave, symObjAddr: 0x104, symBinAddr: 0x100003930, symSize: 0xBC }
-  - { offsetInCU: 0x234, offset: 0x234, size: 0x8, addend: 0x0, symName: _assignTable, symObjAddr: 0x1C0, symBinAddr: 0x1000039EC, symSize: 0xE4 }
-  - { offsetInCU: 0x2A2, offset: 0x2A2, size: 0x8, addend: 0x0, symName: _tableStatus, symObjAddr: 0x2A4, symBinAddr: 0x100003AD0, symSize: 0x12C }
-  - { offsetInCU: 0x2E2, offset: 0x2E2, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x3D0, symBinAddr: 0x100003BFC, symSize: 0x314 }
+  - { offsetInCU: 0x14C, offset: 0x14C, size: 0x8, addend: 0x0, symName: _createTable, symObjAddr: 0x0, symBinAddr: 0x10000380C, symSize: 0x58 }
+  - { offsetInCU: 0x174, offset: 0x174, size: 0x8, addend: 0x0, symName: _createGuest, symObjAddr: 0x58, symBinAddr: 0x100003864, symSize: 0xB4 }
+  - { offsetInCU: 0x1AA, offset: 0x1AA, size: 0x8, addend: 0x0, symName: _checkLeave, symObjAddr: 0x10C, symBinAddr: 0x100003918, symSize: 0xBC }
+  - { offsetInCU: 0x226, offset: 0x226, size: 0x8, addend: 0x0, symName: _assignTable, symObjAddr: 0x1C8, symBinAddr: 0x1000039D4, symSize: 0xE4 }
+  - { offsetInCU: 0x294, offset: 0x294, size: 0x8, addend: 0x0, symName: _tableStatus, symObjAddr: 0x2AC, symBinAddr: 0x100003AB8, symSize: 0x12C }
+  - { offsetInCU: 0x2D4, offset: 0x2D4, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x3D8, symBinAddr: 0x100003BE4, symSize: 0x320 }
 ...
