@@ -2,17 +2,17 @@
 triple:          'arm64-apple-darwin'
 binary-path:     "/Users/justinshih/college/程設一/output/hw11/Wish_List/output/main"
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _CreateList, symObjAddr: 0x0, symBinAddr: 0x100003810, symSize: 0x34 }
-  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _cmp, symObjAddr: 0x6F0, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _CreateList, symObjAddr: 0x0, symBinAddr: 0x1000037F0, symSize: 0x34 }
+  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _cmp, symObjAddr: 0x708, symBinAddr: 0x100008000, symSize: 0x0 }
   - { offsetInCU: 0x9B, offset: 0x9B, size: 0x8, addend: 0x0, symName: _N, symBinAddr: 0x100008018, symSize: 0x0 }
   - { offsetInCU: 0xB0, offset: 0xB0, size: 0x8, addend: 0x0, symName: _X, symBinAddr: 0x100008028, symSize: 0x0 }
   - { offsetInCU: 0xC5, offset: 0xC5, size: 0x8, addend: 0x0, symName: _O, symBinAddr: 0x10000801C, symSize: 0x0 }
-  - { offsetInCU: 0x132, offset: 0x132, size: 0x8, addend: 0x0, symName: _CreateList, symObjAddr: 0x0, symBinAddr: 0x100003810, symSize: 0x34 }
-  - { offsetInCU: 0x168, offset: 0x168, size: 0x8, addend: 0x0, symName: _AddItem, symObjAddr: 0x34, symBinAddr: 0x100003844, symSize: 0xC8 }
-  - { offsetInCU: 0x1D2, offset: 0x1D2, size: 0x8, addend: 0x0, symName: _DeleteList, symObjAddr: 0xFC, symBinAddr: 0x10000390C, symSize: 0x74 }
-  - { offsetInCU: 0x220, offset: 0x220, size: 0x8, addend: 0x0, symName: _price_cmp, symObjAddr: 0x170, symBinAddr: 0x100003980, symSize: 0xA8 }
-  - { offsetInCU: 0x28E, offset: 0x28E, size: 0x8, addend: 0x0, symName: _discount_cmp, symObjAddr: 0x218, symBinAddr: 0x100003A28, symSize: 0x88 }
-  - { offsetInCU: 0x2E0, offset: 0x2E0, size: 0x8, addend: 0x0, symName: _quality_cmp, symObjAddr: 0x2A0, symBinAddr: 0x100003AB0, symSize: 0x88 }
-  - { offsetInCU: 0x332, offset: 0x332, size: 0x8, addend: 0x0, symName: _qsort_cmp, symObjAddr: 0x328, symBinAddr: 0x100003B38, symSize: 0x104 }
-  - { offsetInCU: 0x3AE, offset: 0x3AE, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x42C, symBinAddr: 0x100003C3C, symSize: 0x2C0 }
+  - { offsetInCU: 0x128, offset: 0x128, size: 0x8, addend: 0x0, symName: _CreateList, symObjAddr: 0x0, symBinAddr: 0x1000037F0, symSize: 0x34 }
+  - { offsetInCU: 0x15E, offset: 0x15E, size: 0x8, addend: 0x0, symName: _AddItem, symObjAddr: 0x34, symBinAddr: 0x100003824, symSize: 0xC8 }
+  - { offsetInCU: 0x1C8, offset: 0x1C8, size: 0x8, addend: 0x0, symName: _DeleteList, symObjAddr: 0xFC, symBinAddr: 0x1000038EC, symSize: 0x74 }
+  - { offsetInCU: 0x216, offset: 0x216, size: 0x8, addend: 0x0, symName: _price_cmp, symObjAddr: 0x170, symBinAddr: 0x100003960, symSize: 0xB0 }
+  - { offsetInCU: 0x286, offset: 0x286, size: 0x8, addend: 0x0, symName: _discount_cmp, symObjAddr: 0x220, symBinAddr: 0x100003A10, symSize: 0x90 }
+  - { offsetInCU: 0x2D9, offset: 0x2D9, size: 0x8, addend: 0x0, symName: _quality_cmp, symObjAddr: 0x2B0, symBinAddr: 0x100003AA0, symSize: 0x90 }
+  - { offsetInCU: 0x32C, offset: 0x32C, size: 0x8, addend: 0x0, symName: _qsort_cmp, symObjAddr: 0x340, symBinAddr: 0x100003B30, symSize: 0x104 }
+  - { offsetInCU: 0x3A8, offset: 0x3A8, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x444, symBinAddr: 0x100003C34, symSize: 0x2C0 }
 ...

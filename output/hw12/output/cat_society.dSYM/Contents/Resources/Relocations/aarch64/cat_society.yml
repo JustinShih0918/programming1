@@ -1,0 +1,15 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/justinshih/college/程設一/output/hw12/output/cat_society"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _creatCat, symObjAddr: 0x0, symBinAddr: 0x100003844, symSize: 0x108 }
+  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _jobs, symObjAddr: 0x700, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x6E, offset: 0x6E, size: 0x8, addend: 0x0, symName: _n, symBinAddr: 0x10001B894, symSize: 0x0 }
+  - { offsetInCU: 0x8A, offset: 0x8A, size: 0x8, addend: 0x0, symName: _m, symBinAddr: 0x10001B890, symSize: 0x0 }
+  - { offsetInCU: 0x9F, offset: 0x9F, size: 0x8, addend: 0x0, symName: _clist, symBinAddr: 0x100008010, symSize: 0x0 }
+  - { offsetInCU: 0xF7, offset: 0xF7, size: 0x8, addend: 0x0, symName: _creatCat, symObjAddr: 0x0, symBinAddr: 0x100003844, symSize: 0x108 }
+  - { offsetInCU: 0x157, offset: 0x157, size: 0x8, addend: 0x0, symName: _cmp, symObjAddr: 0x108, symBinAddr: 0x10000394C, symSize: 0x1EC }
+  - { offsetInCU: 0x18D, offset: 0x18D, size: 0x8, addend: 0x0, symName: _cmp_1, symObjAddr: 0x2F4, symBinAddr: 0x100003B38, symSize: 0x194 }
+  - { offsetInCU: 0x1DF, offset: 0x1DF, size: 0x8, addend: 0x0, symName: _printCat, symObjAddr: 0x488, symBinAddr: 0x100003CCC, symSize: 0x6C }
+  - { offsetInCU: 0x203, offset: 0x203, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x4F4, symBinAddr: 0x100003D38, symSize: 0x20C }
+...
