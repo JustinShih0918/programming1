@@ -1,0 +1,13 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/justinshih/college/程設一/output/hw12/output/Golden_Ratio_Overheat"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _search, symObjAddr: 0x0, symBinAddr: 0x100003CEC, symSize: 0xF8 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _f0, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x6F, offset: 0x6F, size: 0x8, addend: 0x0, symName: _f1, symBinAddr: 0x1000087E4, symSize: 0x0 }
+  - { offsetInCU: 0x84, offset: 0x84, size: 0x8, addend: 0x0, symName: _len, symBinAddr: 0x100008FD0, symSize: 0x0 }
+  - { offsetInCU: 0xAC, offset: 0xAC, size: 0x8, addend: 0x0, symName: _n, symBinAddr: 0x1000092F0, symSize: 0x0 }
+  - { offsetInCU: 0xC8, offset: 0xC8, size: 0x8, addend: 0x0, symName: _k, symBinAddr: 0x100008FC8, symSize: 0x0 }
+  - { offsetInCU: 0xD1, offset: 0xD1, size: 0x8, addend: 0x0, symName: _search, symObjAddr: 0x0, symBinAddr: 0x100003CEC, symSize: 0xF8 }
+  - { offsetInCU: 0x107, offset: 0x107, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xF8, symBinAddr: 0x100003DE4, symSize: 0x188 }
+...
