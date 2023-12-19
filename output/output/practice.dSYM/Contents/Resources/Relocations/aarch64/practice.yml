@@ -2,12 +2,13 @@
 triple:          'arm64-apple-darwin'
 binary-path:     "/Users/justinshih/college/程設一/output/output/practice"
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _check, symObjAddr: 0x0, symBinAddr: 0x10000391C, symSize: 0x334 }
-  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _row, symBinAddr: 0x10000B0DC, symSize: 0x0 }
-  - { offsetInCU: 0x7B, offset: 0x7B, size: 0x8, addend: 0x0, symName: _col, symBinAddr: 0x100008008, symSize: 0x0 }
-  - { offsetInCU: 0x90, offset: 0x90, size: 0x8, addend: 0x0, symName: _grid, symBinAddr: 0x10000A718, symSize: 0x0 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _check, symObjAddr: 0x0, symBinAddr: 0x100003910, symSize: 0x334 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _row, symBinAddr: 0x10000B0E0, symSize: 0x0 }
+  - { offsetInCU: 0x7B, offset: 0x7B, size: 0x8, addend: 0x0, symName: _col, symBinAddr: 0x10000800C, symSize: 0x0 }
+  - { offsetInCU: 0x90, offset: 0x90, size: 0x8, addend: 0x0, symName: _grid, symBinAddr: 0x10000A71C, symSize: 0x0 }
   - { offsetInCU: 0xB7, offset: 0xB7, size: 0x8, addend: 0x0, symName: _N, symBinAddr: 0x100008004, symSize: 0x0 }
   - { offsetInCU: 0xCC, offset: 0xCC, size: 0x8, addend: 0x0, symName: _M, symBinAddr: 0x100008000, symSize: 0x0 }
-  - { offsetInCU: 0xD5, offset: 0xD5, size: 0x8, addend: 0x0, symName: _check, symObjAddr: 0x0, symBinAddr: 0x10000391C, symSize: 0x334 }
-  - { offsetInCU: 0x1B3, offset: 0x1B3, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x334, symBinAddr: 0x100003C50, symSize: 0x314 }
+  - { offsetInCU: 0xE1, offset: 0xE1, size: 0x8, addend: 0x0, symName: _T, symBinAddr: 0x100008008, symSize: 0x0 }
+  - { offsetInCU: 0xEA, offset: 0xEA, size: 0x8, addend: 0x0, symName: _check, symObjAddr: 0x0, symBinAddr: 0x100003910, symSize: 0x334 }
+  - { offsetInCU: 0x1C8, offset: 0x1C8, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x334, symBinAddr: 0x100003C44, symSize: 0x320 }
 ...
