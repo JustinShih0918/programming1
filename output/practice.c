@@ -2,69 +2,70 @@
 #include <stdlib.h>
 #include <string.h>
 
-int row[50][50];
-int col[50][50];
-char grid[50][50];
-
 int N,M;
-int T;
+int grid[20][20];
+int x[5] = {1,-1,0,0,0};
+int y[5] = {0,0,1,-1,0};
+int isG;
+
+void flip(int i,int j){
+    for(int k = 0;k<5;k++){
+        grid[i+x[k]][j+y[k]] = !grid[i+x[k]][j+y[k]];
+    }
+}
 
 int check(){
-    for(int i = 0;i<N;i++){
-        int cnt = 0;
-        int idx = 0;
-        for(int j = 0;j<=M;j++){
-            if(grid[i][j]=='o') cnt++;
-            else if(cnt>0){
-                if(idx==row[i][0]) return 0;
-                if(row[i][++idx]!=cnt) return 0;
-                cnt = 0;
-            }
+    for(int i = 1;i<=N;i++){
+        for(int j = 1;j<=M;j++){
+            if(grid[i][j]!=grid[1][1]) return 0;
         }
-        if(idx!=row[i][0]) return 0;
     }
-
-    for(int i = 0;i<M;i++){
-        int cnt = 0;
-        int idx = 0;
-        for(int j = 0;j<=N;j++){
-            if(grid[j][i]=='o') cnt++;
-            else if(cnt>0){
-                if(idx==col[i][0]) return 0;
-                if(col[i][++idx]!=cnt) return 0;
-                cnt = 0;
-            }
-        }
-        if(idx!=col[i][0]) return 0;
-    }
-
     return 1;
 }
 
-int main(){
-    scanf("%d",&T);
-    while(T--){
-        memset(row,0,sizeof(row));
-        memset(col,0,sizeof(col));
-        memset(grid,'\0',sizeof(grid));
-        scanf("%d %d",&N,&M);
-        for(int i = 0;i<N;i++){
-            scanf("%d",&row[i][0]);
-            for(int j = 1;j<=row[i][0];j++){
-                scanf("%d",&row[i][j]);
-            }
-        }
-        for(int i = 0;i<M;i++){
-            scanf("%d",&col[i][0]);
-            for(int j = 1;j<=col[i][0];j++){
-                scanf("%d",&col[i][j]);
-            }
-        }
-        for(int i = 0;i<N;i++){
-            scanf("%s",grid[i]);
-        }
-
-        printf(check()?"Yes\n":"No\n");
+void solve(int x,int y,int times,int goal){
+    if(goal==times){
+        isG = check();
+        return;
     }
 
+    if(x==N+1||isG) return;
+    
+    flip(x,y);
+    if(y<M) solve(x,y+1,times+1,goal);
+    else solve(x+1,1,times+1,goal);
+
+    flip(x,y);
+    if(y<M) solve(x,y+1,times,goal);
+    else solve(x+1,1,times,goal);
+    
+    return;
+}
+
+
+int main(){
+    int T;
+    scanf("%d",&T);
+    while(T--){
+        scanf("%d %d",&N,&M);
+        char tmp;
+        for(int i = 1;i<=N;i++){
+            for(int j= 1;j<=M;j++){
+                scanf(" %c",&tmp);
+                if(tmp=='b') grid[i][j] = 0;
+                else if(tmp=='w') grid[i][j] = 1;
+            }
+        }
+
+        int goal = N*M;
+        for(int i = 0;i<=goal;i++){
+            solve(1,1,0,i);
+            if(isG){
+                printf("%d\n",i);
+                break;
+            }
+        }
+
+        if(isG==0) printf("oops\n");
+    }
 }
