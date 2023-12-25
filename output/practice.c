@@ -1,71 +1,48 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define max(x,y) ((x)>(y)?(x):(y))
+int N;
+long long price[100000];
 
-int N,M;
-int grid[20][20];
-int x[5] = {1,-1,0,0,0};
-int y[5] = {0,0,1,-1,0};
-int isG;
-
-void flip(int i,int j){
-    for(int k = 0;k<5;k++){
-        grid[i+x[k]][j+y[k]] = !grid[i+x[k]][j+y[k]];
+long long recursion(int x,int hold){
+    if(x>=N) return 0;
+    if(!hold){
+        long long buy = recursion(x+1,1)-price[x];
+        long long not_buy = recursion(x+1,0);
+        return max(buy,not_buy);
+    }
+    else{
+        long long sell = recursion(x+1,0)+price[x];
+        long long not_sell = recursion(x+1,1);
+        return max(sell,not_sell);
     }
 }
 
-int check(){
-    for(int i = 1;i<=N;i++){
-        for(int j = 1;j<=M;j++){
-            if(grid[i][j]!=grid[1][1]) return 0;
-        }
+long long record(){
+    long long hold = -2e9;
+    long long nothold = 0;
+    for(int i = 0;i<N;i++){
+        long now_hold = max(hold,nothold-price[i]);
+        long now_nothold = max(nothold,hold+price[i]);
+        hold = now_hold;
+        nothold = now_nothold;
     }
-    return 1;
+    return max(hold,nothold);
 }
 
-void solve(int x,int y,int times,int goal){
-    if(goal==times){
-        isG = check();
-        return;
+long long greed(){
+    long long p = 0;
+    for(int i = 1;i<N;i++){
+        if(price[i]>price[i-1]) p+=price[i]-price[i-1];
     }
-
-    if(x==N+1||isG) return;
-    
-    flip(x,y);
-    if(y<M) solve(x,y+1,times+1,goal);
-    else solve(x+1,1,times+1,goal);
-
-    flip(x,y);
-    if(y<M) solve(x,y+1,times,goal);
-    else solve(x+1,1,times,goal);
-    
-    return;
+    return p;
 }
-
 
 int main(){
-    int T;
-    scanf("%d",&T);
-    while(T--){
-        scanf("%d %d",&N,&M);
-        char tmp;
-        for(int i = 1;i<=N;i++){
-            for(int j= 1;j<=M;j++){
-                scanf(" %c",&tmp);
-                if(tmp=='b') grid[i][j] = 0;
-                else if(tmp=='w') grid[i][j] = 1;
-            }
-        }
-
-        int goal = N*M;
-        for(int i = 0;i<=goal;i++){
-            solve(1,1,0,i);
-            if(isG){
-                printf("%d\n",i);
-                break;
-            }
-        }
-
-        if(isG==0) printf("oops\n");
+    scanf("%d",&N);
+    for(int i = 0;i<N;i++){
+        scanf("%d",&price[i]);
     }
+    printf("%lld\n",greed());
 }
