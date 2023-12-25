@@ -1,92 +1,68 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-char jobs[] = {'l','d','m','a','w','k','n','e','\0'};
-int n,m;
 
+char jobs[9] = {'l','d','m','a','w','k','n','e'};
 
-typedef struct Cat{
-    char *name;
+typedef struct{
+    char* name;
     int job;
     int age;
 }Cat;
 
-Cat* clist[10000];
-
-
-Cat* creatCat(){
-    Cat* cat = malloc(sizeof(Cat));
-    char* name = malloc(sizeof(char)*30);
-    char* job = malloc(sizeof(char)*10);
+void addCat(Cat*l,int i){
+    char* name = malloc(sizeof(char)*40);
     scanf("%s",name);
+    l[i].name = name;
+    char* job = malloc(sizeof(char)*20);
     scanf("%s",job);
-    for(int i = 0;i<9;i++){
-        if(job[0]==jobs[i]){
-            cat->job = i;
+    for(int j = 0;j<9;j++){
+        if(job[0]==jobs[j]){
+            l[i].job = j;
             break;
         }
     }
     free(job);
-    scanf("%d",&cat->age);
-    cat->name = name;
-    return cat;
+    scanf("%d",&l[i].age);
 }
 
-int cmp(int a,int b){
-    if(clist[a]->job<clist[b]->job) return 1;
-    else if(clist[a]->job>clist[b]->job) return -1;
+int cmp(const void* x,const void* y){
+    Cat a = *(Cat*)x;
+    Cat b = *(Cat*)y;
+
+    if(a.job>b.job) return -1;
+    else if(a.job<b.job) return 1;
     else{
-        if(clist[a]->job==3){
-            if(clist[a]->age<clist[b]->age) return -1;
-            else if(clist[a]->age>clist[b]->age) return 1;
-            else return strcmp(clist[a]->name,clist[b]->name);
-            
+        if(a.job==3){
+            if(a.age>b.age) return 1;
+            else if(a.age<b.age) return -1;
+            else return strcmp(a.name,b.name);
         }else{
-            if(clist[a]->age<clist[b]->age) return 1;
-            else if(clist[a]->age>clist[b]->age) return -1;
-            else return strcmp(clist[a]->name,clist[b]->name);
+            if(a.age<b.age) return 1;
+            else if(a.age>b.age) return -1;
+            else return strcmp(a.name,b.name);
         }
     }
+
 }
 
-int cmp_1(const void** a,const void** b){
-    Cat* A = *(Cat**)a;
-    Cat* B = *(Cat**)b;
-    if(A->job<B->job) return 1;
-    else if(A->job>B->job) return -1;
-    else{
-        if(A->job==3){
-            if(A->age<B->age) return -1;
-            else if(A->age>B->age) return 1;
-            else return strcmp(A->name,B->name);
-            
-        }else{
-            if(A->age<B->age) return 1;
-            else if(A->age>B->age) return -1;
-            else return strcmp(A->name,B->name);
-        }
-    }
-}
-
-void printCat(int i){
-    printf("%s %d %d\n",clist[i]->name,clist[i]->job,clist[i]->age);
-}
 
 int main(){
-    
-    while(scanf("%d %d",&n,&m)!=EOF){
-        
-        for(int i = 0;i<n;i++) clist[i] = creatCat();
-        qsort(clist,n,sizeof(Cat*),cmp_1);
-        if(m>n) m = n;
-        for(int i = 0;i<m;i++){
-            printf("%s\n",clist[i]->name);
-        }
-        
+    int N,M;
+    while(scanf("%d %d",&N,&M)!=EOF){
+        Cat* clist = malloc(sizeof(Cat)*N);
+        for(int i = 0;i<N;i++) addCat(clist,i);
 
-        for(int i = 0;i<n;i++){
-            free(clist[i]->name);
-            free(clist[i]);
+        qsort(clist,N,sizeof(Cat),cmp);
+
+        if(M>N) M = N;
+        for(int i = 0;i<M;i++){
+            printf("%s\n",clist[i].name);
         }
+
+        for(int i = 0;i<N;i++){
+            free(clist[i].name);
+        }
+        free(clist);
     }
 }

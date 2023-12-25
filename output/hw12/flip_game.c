@@ -29,7 +29,7 @@ void solve(int x,int y,int times,int goal){
         return;
     }
     if(isG||x==N+1) return;
-
+    
     flip(x,y);
     if(y<M) solve(x,y+1,times+1,goal);
     else solve(x+1,1,times+1,goal);
@@ -37,7 +37,6 @@ void solve(int x,int y,int times,int goal){
     flip(x,y);
     if(y<M) solve(x,y+1,times,goal);
     else solve(x+1,1,times,goal);
-
     return;    
 }
 
