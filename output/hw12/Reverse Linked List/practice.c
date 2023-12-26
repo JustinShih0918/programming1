@@ -11,22 +11,23 @@ void Push(Node** ptr_head,int x){
 }
 void Pop(Node** ptr_head){
     if(*ptr_head==NULL) return;
-    Node *temp = *ptr_head;
-    *ptr_head = (*ptr_head)->next;
-    free(temp);
+    Node* tmp = malloc(sizeof(Node));
+    tmp = *ptr_head;
+    *ptr_head = tmp->next;
+    free(tmp);
 }
 void Reverse_List(Node** ptr_head){
     if(*ptr_head==NULL) return;
-    Node* newhead;
+    Node* head;
     Node* tail = NULL;
-    Node* temp = NULL;
-    newhead = *ptr_head;
-    while(newhead->next!=NULL){
-        temp = newhead->next;
-        newhead->next = tail;
-        tail = newhead;
-        newhead = temp;
-    }
-    newhead->next = tail;
-    *ptr_head = newhead;
+    Node* tmp = NULL;
+    head = *ptr_head;
+    while(head->next!=NULL){
+        tmp = head->next;
+        head->next = tail;
+        tail = head;
+        head = tmp;
+    } 
+    head->next = tail;
+    *ptr_head = head;
 }

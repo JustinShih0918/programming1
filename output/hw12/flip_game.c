@@ -37,7 +37,8 @@ void solve(int x,int y,int times,int goal){
     flip(x,y);
     if(y<M) solve(x,y+1,times,goal);
     else solve(x+1,1,times,goal);
-    return;    
+
+       
 }
 
 void printArr(){

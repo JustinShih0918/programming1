@@ -1,0 +1,17 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/justinshih/college/程設一/output/hw12/output/flip_game_v2"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _flip, symObjAddr: 0x0, symBinAddr: 0x1000039D0, symSize: 0xE0 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: _t, symBinAddr: 0x1000081A0, symSize: 0x0 }
+  - { offsetInCU: 0x69, offset: 0x69, size: 0x8, addend: 0x0, symName: _n, symBinAddr: 0x10000800C, symSize: 0x0 }
+  - { offsetInCU: 0x7E, offset: 0x7E, size: 0x8, addend: 0x0, symName: _m, symBinAddr: 0x100008008, symSize: 0x0 }
+  - { offsetInCU: 0x93, offset: 0x93, size: 0x8, addend: 0x0, symName: _s, symBinAddr: 0x100008010, symSize: 0x0 }
+  - { offsetInCU: 0xBA, offset: 0xBA, size: 0x8, addend: 0x0, symName: _MIN, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0xCF, offset: 0xCF, size: 0x8, addend: 0x0, symName: _cnt, symBinAddr: 0x100008004, symSize: 0x0 }
+  - { offsetInCU: 0xD8, offset: 0xD8, size: 0x8, addend: 0x0, symName: _flip, symObjAddr: 0x0, symBinAddr: 0x1000039D0, symSize: 0xE0 }
+  - { offsetInCU: 0x10A, offset: 0x10A, size: 0x8, addend: 0x0, symName: _check, symObjAddr: 0xE0, symBinAddr: 0x100003AB0, symSize: 0x110 }
+  - { offsetInCU: 0x14E, offset: 0x14E, size: 0x8, addend: 0x0, symName: _dfs, symObjAddr: 0x1F0, symBinAddr: 0x100003BC0, symSize: 0x17C }
+  - { offsetInCU: 0x172, offset: 0x172, size: 0x8, addend: 0x0, symName: _solve, symObjAddr: 0x36C, symBinAddr: 0x100003D3C, symSize: 0x94 }
+  - { offsetInCU: 0x187, offset: 0x187, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x400, symBinAddr: 0x100003DD0, symSize: 0x194 }
+...
